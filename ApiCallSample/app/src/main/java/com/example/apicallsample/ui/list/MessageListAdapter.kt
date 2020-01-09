@@ -1,5 +1,6 @@
 package com.example.apicallsample.ui.list
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingComponent
@@ -36,6 +37,7 @@ class MessageListAdapter(
         )
 
         binding.root.setOnClickListener {
+            Log.e("MessageClick", "Passou no evento de click")
             binding.message?.let {
                 itemClickCallback.invoke(it)
             }
